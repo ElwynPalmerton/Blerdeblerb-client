@@ -6,7 +6,7 @@ import "./App.css";
 
 // Pages
 import Bio from "./pages/Bio/Bio";
-import Feed from "./pages/Feed";
+import Feed from "./pages/Feed/Feed";
 import FindBlerbers from "./pages/FindBlerbers";
 import Following from "./pages/Following";
 import Login from "./pages/Login";

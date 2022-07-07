@@ -7,8 +7,8 @@ import setHeaders from "../utils/setHeaders";
 
 //Components
 import API from "../utils/API";
-import BlerbForm from "./BlerbForm";
-import BlerbStream from "./BlerbStream";
+import BlerbForm from "./Feed/BlerbForm";
+import BlerbStream from "./Feed/BlerbStream";
 import LayoutGrid from "./LayoutGrid";
 import Navbar from "./Navbar";
 

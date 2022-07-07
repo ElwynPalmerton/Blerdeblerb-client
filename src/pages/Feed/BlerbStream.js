@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Blerb from "./Blerb";
+import Blerb from "../Blerb";
 // import setHeaders from '../utils/setHeaders';
-import API from "../utils/API";
+import API from "../../utils/API";
 // import setHeaders from '../utils/setHeaders';
 import { connect } from "react-redux";
-import { likeBlerb, likePost, addBlerb, preLikeBlerb } from "../actions/feed";
-import ErrorBoundary from "./ErrorBoundary";
-import setHeaders from "../utils/setHeaders";
+import {
+  likeBlerb,
+  likePost,
+  addBlerb,
+  preLikeBlerb,
+} from "../../actions/feed";
+import ErrorBoundary from "../ErrorBoundary";
+import setHeaders from "../../utils/setHeaders";
 //MUI
 // import { makeStyles } from '@material-ui/core/styles';
 

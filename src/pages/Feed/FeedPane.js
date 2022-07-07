@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { changeName, logout } from "../actions/user";
-import { initializeBlerbs, addHistory, addBlerbs } from "../actions/feed";
+import { changeName, logout } from "../../actions/user";
+import { initializeBlerbs, addHistory, addBlerbs } from "../../actions/feed";
 import BlerbForm from "./BlerbForm";
 import BlerbStream from "./BlerbStream";
-import API from "../utils/API";
-import setHeaders from "../utils/setHeaders";
+import API from "../../utils/API";
+import setHeaders from "../../utils/setHeaders";
 import { DateTime } from "luxon";
 
 import Button from "@material-ui/core/Button";
