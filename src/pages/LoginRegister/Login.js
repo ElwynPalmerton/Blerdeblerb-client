@@ -58,7 +58,7 @@ function Login(props) {
       .then((result) => {
         if (result.status === 200 && !result.data.error) {
           setTokens(result.data.token); //JWT
-          console.log("user after login: ", result.data);
+          // console.log("user after login: ", result.data);
           props.login(result.data); //redux state
         } else {
           setIsError(true);

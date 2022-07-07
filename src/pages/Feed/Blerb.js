@@ -78,7 +78,7 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
   const imgUrl = avatarBaseUrl + blerb.author._id;
 
   function onImageError(e) {
-    console.log("image error");
+    // console.log("image error");
     e.target.onerror = null;
     e.target.src = defaultUserAvatar;
   }

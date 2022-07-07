@@ -76,14 +76,21 @@ function Navbar(props) {
   // This just sets a boolean inside Navbar.
 
   useEffect(() => {
-    console.log("props.state.darkMode: ", props.state.darkMode);
-    // console.log("setting local darkmode: ", !props.state.darkMode);
-    localStorage.setItem("darkmode", !props.state.darkMode);
-  });
+    const darkModeInLocalStorage = localStorage.getItem("darkMode") === "true";
+    const darkModeInState = props.state.darkMode;
+
+    // console.log("Local: ", darkModeInLocalStorage);
+    // console.log("State: ", darkModeInState);
+
+    if (darkModeInLocalStorage !== darkModeInState) {
+      props.toggleDarkMode(darkModeInLocalStorage);
+    }
+  }, [props.state.darkMode]);
 
   function changeDarkMode(e) {
-    props.toggleDarkMode(!props.state.darkMode);
-    // setSwitchValue(!props.state.darkMode);
+    const newDarkModeSetting = !props.state.darkMode;
+    props.toggleDarkMode(newDarkModeSetting);
+    localStorage.setItem("darkMode", newDarkModeSetting);
   }
 
   // style = {{ background: "lightgray" }}
@@ -162,7 +169,7 @@ function Navbar(props) {
               <CustomSwitch
                 className={classes.switch}
                 onChange={changeDarkMode}
-                checked={!props.state.darkMode}
+                checked={props.state.darkMode}
               ></CustomSwitch>
             </Grid>
             {/* </Grid> */}

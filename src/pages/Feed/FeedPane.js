@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function FeedPane(props) {
-  console.log(props);
+  // console.log(props);
 
   const classes = useStyles();
   const [error, setError] = useState("");
@@ -105,7 +105,7 @@ function FeedPane(props) {
       .then((result) => {
         if (result.data) {
           if (result.data.length !== 0) {
-            console.log("initializing blerbs", result.data);
+            // console.log("initializing blerbs", result.data);
             props.initializeBlerbs(result.data);
           }
         } else {
@@ -143,7 +143,7 @@ function FeedPane(props) {
         .then((result) => {
           if (result.data) {
             if (result.data.length !== 0) {
-              console.log("initializing blerbs", result.data);
+              // console.log("initializing blerbs", result.data);
               props.initializeBlerbs(result.data);
             }
           } else {

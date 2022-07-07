@@ -1,14 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {
-  unstable_createMuiStrictModeTheme
-} from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles'
-import { connect } from 'react-redux';
-import { toggleDarkMode } from '../actions/styles'
+import { unstable_createMuiStrictModeTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { connect } from "react-redux";
+import { toggleDarkMode } from "../actions/styles";
 
 function StylesContext(props) {
-
   const muiLightTheme = unstable_createMuiStrictModeTheme({
     palette: {
       type: "light",
@@ -19,24 +16,21 @@ function StylesContext(props) {
         main: "#9782a8",
       },
       navText: {
-        main: "#ffffff"
+        main: "#ffffff",
       },
       navBackground: {
-        main: "#5F00D8"
+        main: "#5F00D8",
       },
       yellow: {
-        main: "#cfc50a"
+        main: "#cfc50a",
       },
       border: {
-        main: "#bbbbbb"
+        main: "#bbbbbb",
       },
     },
     feedWidth: "500px",
     spacing: 4,
-    fontFamily: [
-      'Chilanka',
-      'cursive',
-    ].join(','),
+    fontFamily: ["Chilanka", "cursive"].join(","),
   });
 
   const muiDarkTheme = unstable_createMuiStrictModeTheme({
@@ -50,39 +44,31 @@ function StylesContext(props) {
         main: "#9782a8",
       },
       navText: {
-        main: "#ffffff"
+        main: "#ffffff",
       },
       yellow: {
-        main: "#cfc50a"
+        main: "#cfc50a",
       },
       navBackground: {
-        main: "#191919"
+        main: "#191919",
       },
       border: {
-        main: "#bbbbbb"
+        main: "#bbbbbb",
       },
-
     },
     feedWidth: "500px",
     spacing: 4,
-    fontFamily: [
-      'Chilanka',
-      'cursive',
-    ].join(','),
+    fontFamily: ["Chilanka", "cursive"].join(","),
   });
 
-  const theme = props.darkMode ? muiLightTheme : muiDarkTheme;
+  const theme = props.darkMode ? muiDarkTheme : muiLightTheme;
 
-  return (
-    <ThemeProvider theme={theme}>
-      {props.children}
-    </ThemeProvider>
-  )
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 }
 
 const mapStateToProps = (state) => {
-  return ({ darkMode: state.stylesReducer.darkMode })
-}
+  return { darkMode: state.stylesReducer.darkMode };
+};
 
 const mapDispatchToProps = { toggleDarkMode };
 

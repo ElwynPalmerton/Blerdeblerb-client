@@ -28,9 +28,9 @@ import setTokens from "./utils/setTokens";
 
 //Set up Redux store
 let store = createStore(combinedReducers);
-store.subscribe(() => console.log("STORE: ", store.getState()));
+store.subscribe(() => console.log("STORE subscription: ", store.getState()));
 
-console.log("STORE: ", store.getState());
+// console.log("STORE: ", store.getState());
 
 function App(props) {
   setHeaders();
