@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleDarkMode } from "../../actions/styles";
@@ -67,19 +67,23 @@ const useStyles = makeStyles((theme) => ({
 function Navbar(props) {
   const classes = useStyles();
 
-  // const darkModeInitialState = props.darkMode;
-  // const initDarkMode = localStorage.getItem('darkmode');
+  // const initDarkMode = localStorage.getItem("darkmode");
+
   // props.toggleDarkMode(initDarkMode);
+  // What does toggleDarkMode do?
+
   // const [switchValue, setSwitchValue] = useState(darkModeInitialState);
+  // This just sets a boolean inside Navbar.
 
   useEffect(() => {
+    console.log("props.state.darkMode: ", props.state.darkMode);
     // console.log("setting local darkmode: ", !props.state.darkMode);
     localStorage.setItem("darkmode", !props.state.darkMode);
   });
 
   function changeDarkMode(e) {
     props.toggleDarkMode(!props.state.darkMode);
-    // setSwitchValue(!props.darkMode);
+    // setSwitchValue(!props.state.darkMode);
   }
 
   // style = {{ background: "lightgray" }}
