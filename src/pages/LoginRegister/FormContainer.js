@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "../components/AuthForm";
+import { Form } from "../../components/AuthForm";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { AuthContext, useAuth } from "../context/auth";
+import { AuthContext, useAuth } from "../../context/auth";
 import { connect } from "react-redux";
-import { login } from "../actions/user";
-import API from "../utils/API";
+import { login } from "../../actions/user";
+import API from "../../utils/API";
 
 //Components
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 import FormContainer from "./FormContainer";
 
 //MUI

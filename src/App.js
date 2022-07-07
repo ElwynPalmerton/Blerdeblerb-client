@@ -9,10 +9,10 @@ import Bio from "./pages/Bio/Bio";
 import Feed from "./pages/Feed/Feed";
 import FindBlerbers from "./pages/FindBlerbers";
 import Following from "./pages/Following";
-import Login from "./pages/Login";
+import Login from "./pages/LoginRegister/Login";
 import PrivateRoute from "./pages/PrivateRoute";
 import Profile from "./pages/Profile";
-import Signup from "./pages/Signup";
+import Signup from "./pages/LoginRegister/Signup";
 
 // Styles
 import CssBaseline from "@material-ui/core/CssBaseline";

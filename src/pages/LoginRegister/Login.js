@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { useAuth } from "../context/auth";
+import { useAuth } from "../../context/auth";
 import { connect } from "react-redux";
-import { login } from "../actions/user";
+import { login } from "../../actions/user";
 
 //Components
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 import FormContainer from "./FormContainer";
 
 //MUI & styled components
@@ -13,7 +13,7 @@ import FormContainer from "./FormContainer";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import API from "../utils/API";
+import API from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
   label: {

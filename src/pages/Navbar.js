@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { toggleDarkMode } from "../actions/styles";
 
 //Components
-import LogoutButton from "./LogoutButton";
+import LogoutButton from "./LoginRegister/LogoutButton";
 
 //Material-UI
 import { withStyles, makeStyles } from "@material-ui/core/styles";

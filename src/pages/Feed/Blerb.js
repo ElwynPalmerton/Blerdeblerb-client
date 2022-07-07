@@ -13,8 +13,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
 //avatar
-import defaultUserAvatar from "./Bio/assets/defaultUserAvatar.png";
-import { baseURL } from "../utils/API";
+import defaultUserAvatar from "../Bio/assets/defaultUserAvatar.png";
+import { baseURL } from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
   root: {
