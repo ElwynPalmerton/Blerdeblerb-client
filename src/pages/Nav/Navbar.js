@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleDarkMode } from "../../actions/styles";
@@ -67,24 +67,14 @@ const useStyles = makeStyles((theme) => ({
 function Navbar(props) {
   const classes = useStyles();
 
-  // const initDarkMode = localStorage.getItem("darkmode");
-
-  // props.toggleDarkMode(initDarkMode);
-  // What does toggleDarkMode do?
-
-  // const [switchValue, setSwitchValue] = useState(darkModeInitialState);
-  // This just sets a boolean inside Navbar.
-
   useEffect(() => {
     const darkModeInLocalStorage = localStorage.getItem("darkMode") === "true";
     const darkModeInState = props.state.darkMode;
 
-    // console.log("Local: ", darkModeInLocalStorage);
-    // console.log("State: ", darkModeInState);
-
     if (darkModeInLocalStorage !== darkModeInState) {
       props.toggleDarkMode(darkModeInLocalStorage);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.state.darkMode]);
 
   function changeDarkMode(e) {
@@ -93,7 +83,6 @@ function Navbar(props) {
     localStorage.setItem("darkMode", newDarkModeSetting);
   }
 
-  // style = {{ background: "lightgray" }}
   return (
     <div className={classes.root}>
       <AppBar className={classes.bar}>

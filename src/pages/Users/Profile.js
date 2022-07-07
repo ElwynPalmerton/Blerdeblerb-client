@@ -50,6 +50,7 @@ function Profile(props) {
         setError("Unable to submit Blerb to the server");
         console.log(e);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { AuthContext, useAuth } from "../../context/auth";
+import { useAuth } from "../../context/auth";
 import { connect } from "react-redux";
 import { login } from "../../actions/user";
 import API from "../../utils/API";

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Blerb from "./Blerb";
-// import setHeaders from '../utils/setHeaders';
-import API from "../../utils/API";
-// import setHeaders from '../utils/setHeaders';
+import React, { useState } from "react";
 import { connect } from "react-redux";
+
+import API from "../../utils/API";
+import Blerb from "./Blerb";
 import {
   likeBlerb,
   likePost,
@@ -11,14 +10,9 @@ import {
   preLikeBlerb,
 } from "../../actions/feed";
 import ErrorBoundary from "../Nav/ErrorBoundary";
-import setHeaders from "../../utils/setHeaders";
-//MUI
-// import { makeStyles } from '@material-ui/core/styles';
 
 function BlerbStream(props) {
   const [error, setError] = useState("");
-
-  // const { blerbs } = props;
 
   function reblerbHandler(e) {
     e.preventDefault();
@@ -43,12 +37,6 @@ function BlerbStream(props) {
         console.log(e);
       });
   }
-
-  useEffect(() => {
-    // console.log("NEW BLERBS!");
-    // console.log("props.blerbs after change", props.blerbs);
-    // console.log("props.feed after add", props.feed);
-  }, [props.blerbs]);
 
   function likeBlerbHandler(e) {
     e.preventDefault();
@@ -96,7 +84,6 @@ function BlerbStream(props) {
                 blerb={item}
                 likeBlerbHandler={likeBlerbHandler}
                 reblerbHandler={reblerbHandler}
-                // userID={props.user.userID}
               />
             );
           })}

@@ -1,53 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { connect } from 'react-redux';
-import ConnectedShowBio from './ShowBio';
-import EditBio from './EditBio';
-import API from '../../utils/API';
-import { updateBio } from '../../actions/user';
+import { connect } from "react-redux";
+import ConnectedShowBio from "./ShowBio";
+import EditBio from "./EditBio";
+import API from "../../utils/API";
+import { updateBio } from "../../actions/user";
 
 function BioPane(props) {
-
   const [editMode, setEditMode] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   function handleSave(bio) {
-
-    API.post('/users/bio', {
-      bio
-    }).then(result => {
-      if (result.data) {
-        props.updateBio(result.data);
-      } else if (result.error) {
-        setError(result.error);
-      }
-    }).catch((e) => {
-      setError('Unable to save bio');
-      console.log(e);
-    });
+    API.post("/users/bio", {
+      bio,
+    })
+      .then((result) => {
+        if (result.data) {
+          props.updateBio(result.data);
+        } else if (result.error) {
+          setError(result.error);
+        }
+      })
+      .catch((e) => {
+        setError("Unable to save bio");
+        console.log(error);
+      });
 
     setEditMode(false);
   }
 
-  return (
-    !editMode ? (
-      <ConnectedShowBio
-        classes={props.classes}
-        handleClick={() => setEditMode(true)}
-      />
-    ) : (
-        <EditBio
-          color="primary"
-          classes={props.classes}
-          handleSave={handleSave}
-        />
-      )
-  )
+  return !editMode ? (
+    <ConnectedShowBio
+      classes={props.classes}
+      handleClick={() => setEditMode(true)}
+    />
+  ) : (
+    <EditBio color="primary" classes={props.classes} handleSave={handleSave} />
+  );
 }
 
-const mapStateToProps = ((state) => {
-  return ({ user: state.loginReducer })
-})
+const mapStateToProps = (state) => {
+  return { user: state.loginReducer };
+};
 
 const mapDispatchToProps = { updateBio };
 

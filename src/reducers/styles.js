@@ -1,22 +1,14 @@
-const init = localStorage.getItem('darkmode');
+const init = localStorage.getItem("darkmode");
 
-console.log("init: ", init);
-
-const defaultState = { darkMode: true };
+const defaultState = { darkMode: init.toString() === "true" };
 
 function stylesReducer(state = defaultState, action) {
-
   switch (action.type) {
-    case 'TOGGLE_DARKMODE':
-      console.log('toggling', state);
-      // return Object.assign({}, state, {
-      //   darkMode: !state.darkMode
-      // });
-      return ({
+    case "TOGGLE_DARKMODE":
+      return {
         ...state,
         darkMode: action.payload,
-
-      });
+      };
     default:
       return state;
   }

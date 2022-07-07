@@ -63,16 +63,11 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
     DateTime.DATETIME_SHORT
   );
 
-  const [liked, setLiked] = useState(false);
-  const [test, setTest] = useState(false);
-
-  // if (props.blerb.likes.indexOf(props.userID) !== -1) {
-  //   liked = true;
-  // }
+  const [liked, setLiked] = useState(blerb.likes.includes(userID.toString()));
 
   useEffect(() => {
     setLiked(blerb.likes.includes(userID.toString()));
-  }, [blerb]);
+  }, [blerb, userID]);
 
   const avatarBaseUrl = baseURL + "/users/avatar/";
   const imgUrl = avatarBaseUrl + blerb.author._id;
@@ -85,16 +80,11 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
 
   return (
     <Box my={4}>
-      <Paper
-        className={classes.root}
-        variant="outlined"
-        // className={}
-      >
+      <Paper className={classes.root} variant="outlined">
         <Grid container justify="space-between" alignItems="center" spacing={3}>
           <Grid className={classes.imgGrid} item={true} xs={4}>
             <img
               className={classes.img}
-              // style={tempStyle}
               alt=""
               onError={onImageError}
               src={imgUrl}
@@ -125,8 +115,8 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
               alignItems="center"
               spacing={3}
             >
+              {/* REBLERB button  */}
               <Grid item={true} xs={2}>
-                {/* REBLERB button  */}
                 <IconButton
                   aria-label="reblerb"
                   size="small"
@@ -136,8 +126,9 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
                   <LoopIcon value={blerb._id} fontSize="inherit" />
                 </IconButton>
               </Grid>
+
+              {/* LIKE button */}
               <Grid item={true} xs={9}>
-                {/* LIKE button */}
                 <IconButton
                   className={classes.icon}
                   aria-label="reblerb"

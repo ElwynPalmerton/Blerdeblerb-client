@@ -17,7 +17,6 @@ import API from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
   label: {
-    // color: theme.palette.primary.main,
     width: "100px",
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
@@ -58,7 +57,6 @@ function Login(props) {
       .then((result) => {
         if (result.status === 200 && !result.data.error) {
           setTokens(result.data.token); //JWT
-          // console.log("user after login: ", result.data);
           props.login(result.data); //redux state
         } else {
           setIsError(true);

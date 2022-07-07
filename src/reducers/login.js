@@ -11,7 +11,6 @@ const defaultState = {
 function loginReducer(state = defaultState, action) {
   switch (action.type) {
     case "LOGIN":
-      console.log(action.payload.id);
       return {
         ...state,
         loggedIn: true,

@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Route, Redirect } from "react-router-dom";
 // import { useAuth } from '../context/auth';
 import { connect } from "react-redux";
@@ -14,6 +14,7 @@ function PrivateRoute({ component: HiddenComponent, ...rest }) {
       setHeaders();
       checkAuth(rest.login, rest.logout);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
