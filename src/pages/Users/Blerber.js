@@ -4,8 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import React from "react";
-import { baseURL } from "../utils/API";
-import defaultUserAvatar from "./Bio/assets/defaultUserAvatar.png";
+import { baseURL } from "../../utils/API";
+import defaultUserAvatar from "../Bio/assets/defaultUserAvatar.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {

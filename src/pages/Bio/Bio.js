@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
 //Components
-import NavBar from '../Navbar';
-import LayoutGrid from '../LayoutGrid';
-import BioPane from './BioPane';
+import NavBar from "../Nav/Navbar";
+import LayoutGrid from "../LayoutGrid";
+import BioPane from "./BioPane";
 
-import AvatarUpload from './AvatarUpload';
+import AvatarUpload from "./AvatarUpload";
 
-import { makeStyles } from '@material-ui/core/styles';
-
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   secondaryText: {
@@ -17,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Bio(props) {
-
   const classes = useStyles();
 
   return (
@@ -32,7 +30,7 @@ function Bio(props) {
         }
       />
     </div>
-  )
+  );
 }
 
 export default Bio;

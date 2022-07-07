@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { toggleDarkMode } from "../actions/styles";
+import { toggleDarkMode } from "../../actions/styles";
 
 //Components
-import LogoutButton from "./LoginRegister/LogoutButton";
+import LogoutButton from "../LoginRegister/LogoutButton";
 
 //Material-UI
 import { withStyles, makeStyles } from "@material-ui/core/styles";

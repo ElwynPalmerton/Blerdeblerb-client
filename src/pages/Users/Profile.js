@@ -2,15 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { initializePosts } from "../actions/feed";
-import setHeaders from "../utils/setHeaders";
+import { initializePosts } from "../../actions/feed";
+import setHeaders from "../../utils/setHeaders";
 
 //Components
-import API from "../utils/API";
-import BlerbForm from "./Feed/BlerbForm";
-import BlerbStream from "./Feed/BlerbStream";
-import LayoutGrid from "./LayoutGrid";
-import Navbar from "./Navbar";
+import API from "../../utils/API";
+import BlerbForm from "../Feed/BlerbForm";
+import BlerbStream from "../Feed/BlerbStream";
+import LayoutGrid from "../LayoutGrid";
+import Navbar from "../Nav/Navbar";
 
 //MUI
 import { makeStyles } from "@material-ui/core/styles";

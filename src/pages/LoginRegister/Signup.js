@@ -6,7 +6,7 @@ import { login } from "../../actions/user";
 import API from "../../utils/API";
 
 //Components
-import Navbar from "../Navbar";
+import Navbar from "../Nav/Navbar";
 import FormContainer from "./FormContainer";
 
 //MUI

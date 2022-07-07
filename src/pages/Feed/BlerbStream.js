@@ -10,7 +10,7 @@ import {
   addBlerb,
   preLikeBlerb,
 } from "../../actions/feed";
-import ErrorBoundary from "../ErrorBoundary";
+import ErrorBoundary from "../Nav/ErrorBoundary";
 import setHeaders from "../../utils/setHeaders";
 //MUI
 // import { makeStyles } from '@material-ui/core/styles';

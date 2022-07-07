@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { login } from "../../actions/user";
 
 //Components
-import Navbar from "../Navbar";
+import Navbar from "../Nav/Navbar";
 import FormContainer from "./FormContainer";
 
 //MUI & styled components

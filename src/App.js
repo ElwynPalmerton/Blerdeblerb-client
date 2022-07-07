@@ -7,11 +7,11 @@ import "./App.css";
 // Pages
 import Bio from "./pages/Bio/Bio";
 import Feed from "./pages/Feed/Feed";
-import FindBlerbers from "./pages/FindBlerbers";
-import Following from "./pages/Following";
+import FindBlerbers from "./pages/Users/FindBlerbers";
+import Following from "./pages/Users/Following";
 import Login from "./pages/LoginRegister/Login";
-import PrivateRoute from "./pages/PrivateRoute";
-import Profile from "./pages/Profile";
+import PrivateRoute from "./pages/Nav/PrivateRoute";
+import Profile from "./pages/Users/Profile";
 import Signup from "./pages/LoginRegister/Signup";
 
 // Styles
