@@ -54,7 +54,7 @@ function App(props) {
                 <PrivateRoute path="/findBlerbers" component={FindBlerbers} />
                 <PrivateRoute path="/bio" component={Bio} />
                 <PrivateRoute path="/following" component={Following} />
-                <PrivateRoute path="/" component={Feed} />
+                <PrivateRoute path="/React" component={Feed} />
               </Switch>
             </div>
           </Router>
