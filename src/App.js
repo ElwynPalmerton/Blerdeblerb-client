@@ -42,7 +42,7 @@ function App(props) {
     >
       <Provider store={store}>
         <StylesContext>
-          <Router>
+          <Router basename="/index.html">
             <CssBaseline />
             <div>
               <Switch>
@@ -54,7 +54,7 @@ function App(props) {
                 <PrivateRoute path="/findBlerbers" component={FindBlerbers} />
                 <PrivateRoute path="/bio" component={Bio} />
                 <PrivateRoute path="/following" component={Following} />
-                <PrivateRoute path="/React" component={Feed} />
+                <PrivateRoute path="/" component={Feed} />
               </Switch>
             </div>
           </Router>
