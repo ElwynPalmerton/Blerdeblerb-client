@@ -1,7 +1,9 @@
 const init = localStorage.getItem("darkmode");
 
+let defaultState;
+
 if (init !== null) {
-  const defaultState = { darkMode: init.toString() === "true" };
+  defaultState = { darkMode: init.toString() === "true" };
 } else {
   defaultState = false;
 }
