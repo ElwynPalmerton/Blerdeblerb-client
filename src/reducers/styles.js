@@ -1,6 +1,10 @@
 const init = localStorage.getItem("darkmode");
 
-const defaultState = { darkMode: init.toString() === "true" };
+if (init !== null) {
+  const defaultState = { darkMode: init.toString() === "true" };
+} else {
+  defaultState = false;
+}
 
 function stylesReducer(state = defaultState, action) {
   switch (action.type) {
