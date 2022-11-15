@@ -33,6 +33,7 @@ store.subscribe(() => console.log("STORE subscription: ", store.getState()));
 // console.log("STORE: ", store.getState());
 
 function App(props) {
+  console.log("hello");
   setHeaders();
   return (
     <AuthContext.Provider
