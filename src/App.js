@@ -26,7 +26,7 @@ import { AuthContext } from "./context/auth";
 import setHeaders from "./utils/setHeaders";
 import setTokens from "./utils/setTokens";
 
-console.log("DEVELOPMENT");
+console.log("ENVIRONMENT: Local Development");
 //Set up Redux store
 let store = createStore(combinedReducers);
 store.subscribe(() => console.log("STORE subscription: ", store.getState()));
