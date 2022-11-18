@@ -1,18 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  useRouteMatch,
+  Route,
+} from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import "./App.css";
 
 // Pages
-import Bio from "./pages/Bio/Bio";
-import Feed from "./pages/Feed/Feed";
-import FindBlerbers from "./pages/Users/FindBlerbers";
-import Following from "./pages/Users/Following";
 import Login from "./pages/LoginRegister/Login";
-import PrivateRoute from "./pages/Nav/PrivateRoute";
-import Profile from "./pages/Users/Profile";
 import Signup from "./pages/LoginRegister/Signup";
+import Profile from "./pages/Users/Profile";
+import FindBlerbers from "./pages/Users/FindBlerbers";
+import Bio from "./pages/Bio/Bio";
+import Following from "./pages/Users/Following";
+import Feed from "./pages/Feed/Feed";
+
+import PrivateRoute from "./pages/Nav/PrivateRoute";
+import ComponentRoutes from "./ComponentRoutes.js";
 
 // Styles
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -25,6 +32,7 @@ import combinedReducers from "./reducers/combinedReducers";
 import { AuthContext } from "./context/auth";
 import setHeaders from "./utils/setHeaders";
 import setTokens from "./utils/setTokens";
+import { useContext } from "react";
 
 console.log("ENVIRONMENT: Local Development");
 //Set up Redux store
@@ -43,20 +51,10 @@ function App(props) {
     >
       <Provider store={store}>
         <StylesContext>
-          <Router basename="/index.html">
+          <Router basename="/#!/index.html">
             <CssBaseline />
             <div>
-              <Switch>
-                {/* <Route exact path="/" component={Home}>
-                </Route> */}
-                <Route path="/login" component={Login} />
-                <Route path="/signup" component={Signup} />
-                <PrivateRoute path="/profile" component={Profile} />
-                <PrivateRoute path="/findBlerbers" component={FindBlerbers} />
-                <PrivateRoute path="/bio" component={Bio} />
-                <PrivateRoute path="/following" component={Following} />
-                <PrivateRoute path="/" component={Feed} />
-              </Switch>
+              <ComponentRoutes />
             </div>
           </Router>
         </StylesContext>
