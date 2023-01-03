@@ -11,8 +11,7 @@ const awsUrl =
 const aswSecureUrl = "https://blerdeblurb-api.com";
 
 const localUrl = "http://localhost:5001";
-export const baseURL =
-  "http://blerdeblergapi-env.eba-i3httipm.us-west-1.elasticbeanstalk.com";
+export const baseURL = "https://blerdeblurb-api.com";
 
 // export const baseURL = "http://localhost:9000";
 
