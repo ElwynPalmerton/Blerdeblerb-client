@@ -8,7 +8,7 @@ import axios from "axios";
 const awsUrl =
   "http://blerdeblergapi-env.eba-i3httipm.us-west-1.elasticbeanstalk.com";
 
-const aswSecureUrl = "https://api.blerdeblurb.com";
+const aswSecureUrl = "https://blerdeblurb-api.com";
 
 const localUrl = "http://localhost:5001";
 export const baseURL =
