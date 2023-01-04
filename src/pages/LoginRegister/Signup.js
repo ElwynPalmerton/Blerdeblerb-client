@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
-import { useAuth } from "../../context/auth";
-import { connect } from "react-redux";
-import { login } from "../../actions/user";
+
 import API from "../../utils/API";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
+import { login } from "../../actions/user";
+import { useAuth } from "../../context/auth";
 
 //Components
-import Navbar from "../Nav/Navbar";
 import FormContainer from "./FormContainer";
+import Navbar from "../Nav/Navbar";
 
 //MUI
-import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -96,7 +97,6 @@ function Signup(props) {
   ) : (
     <div>
       <Navbar from={referer} />
-      {/* <Card> */}
       <FormContainer>
         <p
           style={{
@@ -156,7 +156,6 @@ function Signup(props) {
           <p className={classes.note}>Already have an account?</p>
         </Link>
       </FormContainer>
-      {/* </Card> */}
     </div>
   );
 }

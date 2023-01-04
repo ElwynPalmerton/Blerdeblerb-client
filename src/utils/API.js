@@ -1,20 +1,17 @@
 import axios from "axios";
 
-console.log("NODE_ENV: " + process.env.NODE_ENV);
-console.log("REACT_APP_ENV: " + process.env.REACT_APP_ENV);
-
-// const aswSecureUrl = "https://blerdeblurb-api.com";
-
 const config = {
   development: "http://localhost:5001",
   production: "https://blerdeblurb-api.com",
 };
 
-const environment = process.env.NODE_ENV;
+const awsURL = "https://blerdeblurb-api.com";
 
-export const baseURL = config[environment];
-console.log(baseURL);
+// export const baseURL = config[process.env.NODE_ENV];
+
+// testing locally with live API:
+export const baseURL = awsURL;
 
 export default axios.create({
-  baseURL,
+  baseURL: awsURL,
 });

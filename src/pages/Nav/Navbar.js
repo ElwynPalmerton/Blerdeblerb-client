@@ -108,7 +108,7 @@ function Navbar(props) {
                   className={classes.title}
                 >
                   <div className="title">
-                    blerdeblerb
+                    blerdeblurb
                     <span style={{ fontSize: "1.5rem" }}>🗯</span>
                   </div>
                 </Link>
@@ -161,7 +161,6 @@ function Navbar(props) {
                 checked={props.state.darkMode}
               ></CustomSwitch>
             </Grid>
-            {/* </Grid> */}
           </Grid>
         </Toolbar>
       </AppBar>

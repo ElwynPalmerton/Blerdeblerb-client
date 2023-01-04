@@ -1,24 +1,9 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  useRouteMatch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import "./App.css";
 
-// Pages
-import Login from "./pages/LoginRegister/Login";
-import Signup from "./pages/LoginRegister/Signup";
-import Profile from "./pages/Users/Profile";
-import FindBlerbers from "./pages/Users/FindBlerbers";
-import Bio from "./pages/Bio/Bio";
-import Following from "./pages/Users/Following";
-import Feed from "./pages/Feed/Feed";
-
-import PrivateRoute from "./pages/Nav/PrivateRoute";
 import ComponentRoutes from "./ComponentRoutes.js";
 
 // Styles
@@ -32,7 +17,6 @@ import combinedReducers from "./reducers/combinedReducers";
 import { AuthContext } from "./context/auth";
 import setHeaders from "./utils/setHeaders";
 import setTokens from "./utils/setTokens";
-import { useContext } from "react";
 
 //Set up Redux store
 let store = createStore(combinedReducers);

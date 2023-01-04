@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { DateTime } from "luxon";
+
+import { baseURL } from "../../utils/API";
 import { connect } from "react-redux";
+import { DateTime } from "luxon";
 
 //MUI
-import IconButton from "@material-ui/core/IconButton";
+import Box from "@material-ui/core/Box";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import LoopIcon from "@material-ui/icons/Loop";
-import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import LoopIcon from "@material-ui/icons/Loop";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
 
 //avatar
 import defaultUserAvatar from "../Bio/assets/defaultUserAvatar.png";
-import { baseURL } from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,7 +74,6 @@ function Blerb({ blerb, dispatch, likeBlerbHandler, reblerbHandler, userID }) {
   const imgUrl = avatarBaseUrl + blerb.author._id;
 
   function onImageError(e) {
-    // console.log("image error");
     e.target.onerror = null;
     e.target.src = defaultUserAvatar;
   }

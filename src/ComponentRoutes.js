@@ -17,12 +17,8 @@ import {
 import PrivateRoute from "./pages/Nav/PrivateRoute";
 
 export default function ComponentRoutes() {
-  // return <h1>Hello ComponentRoutes</h1>;
-
   const match = useRouteMatch();
   const location = useLocation();
-  console.log("MATCH: ", match);
-  console.log("LOCATION: ", location);
 
   return (
     <Switch>

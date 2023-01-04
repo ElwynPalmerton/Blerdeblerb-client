@@ -1,5 +1,4 @@
 import React from "react";
-// import { Button } from '../components/AuthForm';
 import { useAuth } from "../../context/auth";
 import { connect } from "react-redux";
 import { logout } from "../../actions/user";
