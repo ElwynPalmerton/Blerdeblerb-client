@@ -1,20 +1,20 @@
 import axios from "axios";
 
-// const herokuURL="https://shielded-dusk-53756.herokuapp.com/"
-// export const baseURL = "https://shielded-dusk-53756.herokuapp.com/"
+console.log("NODE_ENV: " + process.env.NODE_ENV);
+console.log("REACT_APP_ENV: " + process.env.REACT_APP_ENV);
 
-// ! Clean this up.
+// const aswSecureUrl = "https://blerdeblurb-api.com";
 
-const awsUrl =
-  "http://blerdeblergapi-env.eba-i3httipm.us-west-1.elasticbeanstalk.com";
+const config = {
+  development: "http://localhost:5001",
+  production: "https://blerdeblurb-api.com",
+};
 
-const aswSecureUrl = "https://blerdeblurb-api.com";
+const environment = process.env.NODE_ENV;
 
-const localUrl = "http://localhost:5001";
-export const baseURL = "https://blerdeblurb-api.com";
-
-// export const baseURL = "http://localhost:9000";
+export const baseURL = config[environment];
+console.log(baseURL);
 
 export default axios.create({
-  baseURL: aswSecureUrl,
+  baseURL,
 });

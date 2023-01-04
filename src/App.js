@@ -34,13 +34,9 @@ import setHeaders from "./utils/setHeaders";
 import setTokens from "./utils/setTokens";
 import { useContext } from "react";
 
-console.log("NODE_ENV: " + process.env.NODE_ENV);
-console.log("REACT_APP_ENV: " + process.env.REACT_APP_ENV);
 //Set up Redux store
 let store = createStore(combinedReducers);
 store.subscribe(() => console.log("STORE subscription: ", store.getState()));
-
-// testtest
 
 function App(props) {
   setHeaders();
