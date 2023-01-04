@@ -34,7 +34,8 @@ import setHeaders from "./utils/setHeaders";
 import setTokens from "./utils/setTokens";
 import { useContext } from "react";
 
-console.log("ENVIRONMENT: Local Development");
+console.log("NODE_ENV: " + process.env.NODE_ENV);
+console.log("REACT_APP_ENV: " + process.env.REACT_APP_ENV);
 //Set up Redux store
 let store = createStore(combinedReducers);
 store.subscribe(() => console.log("STORE subscription: ", store.getState()));
@@ -42,7 +43,6 @@ store.subscribe(() => console.log("STORE subscription: ", store.getState()));
 // console.log("STORE: ", store.getState());
 
 function App(props) {
-  console.log("PROD");
   setHeaders();
   return (
     <AuthContext.Provider
