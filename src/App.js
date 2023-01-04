@@ -40,7 +40,7 @@ console.log("REACT_APP_ENV: " + process.env.REACT_APP_ENV);
 let store = createStore(combinedReducers);
 store.subscribe(() => console.log("STORE subscription: ", store.getState()));
 
-// console.log("STORE: ", store.getState());
+// test
 
 function App(props) {
   setHeaders();
