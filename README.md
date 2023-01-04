@@ -49,7 +49,8 @@ To run Blerdeblurb locally, you need to clone and run both repos:
 2. Run `npm start` from inside the root level of the repo.
 
 **MongoDB:**
-_You also need to MongoDB locally._
+
+_You also need to MongoDB locally to run Blerdeblurb._
 
 1. Check to see if you have mongoDB installed locally by running `mongo --version`.
 2. If you need to install mongoDB please consult the documentation at [MongoDB Installation Documentation(https://www.mongodb.com/docs/manual/installation/)]
