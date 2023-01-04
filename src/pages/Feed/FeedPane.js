@@ -26,7 +26,6 @@ function FeedPane(props) {
   }, []);
 
   function getNewBlerbs() {
-    // if (!props.initialized) {
     API({
       method: "get",
       url: `/feed/blerbstream`,
@@ -47,8 +46,6 @@ function FeedPane(props) {
       .catch((e) => {
         setError("Unable retrieve get blerbs.");
       });
-    // }
-    // }
   }
 
   function getHistory(e) {
