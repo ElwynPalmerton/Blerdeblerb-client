@@ -46,10 +46,6 @@ function Signup(props) {
 
   const { setTokens } = useAuth(); //useAuth returns useContext(AuthContext);
 
-  useEffect(() => {
-    // console.log("Controlled Component: ", userData);
-  });
-
   function handleChange(e) {
     const { name, value } = e.target;
     setUserData((prevs) => {
