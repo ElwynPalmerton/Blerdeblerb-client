@@ -47,7 +47,7 @@ function Signup(props) {
   const { setTokens } = useAuth(); //useAuth returns useContext(AuthContext);
 
   useEffect(() => {
-    console.log("Controlled Component: ", userData);
+    // console.log("Controlled Component: ", userData);
   });
 
   function handleChange(e) {
@@ -104,7 +104,7 @@ function Signup(props) {
             color: "#d647ba",
           }}
         >
-          This site is still under-development and may not be fully secure.
+          This site is still under development and may not be fully secure.
           Please be sure to use a unique password (one which you have not used
           on another site.)
         </p>
