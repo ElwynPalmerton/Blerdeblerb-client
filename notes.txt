@@ -1,0 +1,18 @@
+
+docker images - list local images.
+docker ps - list running containers
+
+
+Ran this to build:
+docker build . -t blerb-api:1
+
+Run the image above in a container
+docker run -it --rm -p 8080:8080 blerb-api:1
+
+To run with docker-compose
+docker-compose up -d --build
+
+
+To do:
+
+Research docker & docker-compose commands
