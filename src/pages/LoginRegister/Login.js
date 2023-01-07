@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Login(props) {
   const classes = useStyles();
-  console.log("in login");
 
   const [isError, setIsError] = useState(false);
   const [userName, setUserName] = useState("");

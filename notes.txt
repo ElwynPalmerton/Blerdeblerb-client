@@ -16,3 +16,18 @@ docker-compose up -d --build
 To do:
 
 Research docker & docker-compose commands
+
+====================================================================================
+
+Troubleshooting.
+
+Networking...
+
+--> Check to see if maybe it's just a naming issue?
+    :: See what the convention for referencing api from ui in docker-compose.
+
+--> Figure out what the network (or whatever) fields do in docker compose.
+
+--> Find an online tutorial with a front and backend connected.
+
+--> Watch or rewatch some tutorials.
