@@ -47,6 +47,9 @@ Blerdeblurb <br>
 ├── API <br>
 ├── client
 
+1.a. Clone frontend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-client.git`
+  b. Clone backend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git'
+  
 (NOTE: the spelling of the repo names (blerdeblerb) is different than the URL )
 
 2. Navigate into the root level folder for the API repo
