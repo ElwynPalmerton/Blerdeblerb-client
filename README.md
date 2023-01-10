@@ -39,7 +39,7 @@ Blerdeblurb is deployed on AWS with the following services
 
 _Blerdeblurb_ can be run locally with or without docker.
 
-## To run Blerdeblurb with docker and docker-compose
+## To run Blerdeblurb _with_ docker and docker-compose
 
 1. Clone both repos into the same folder so that the folder structure looks like this:
 
