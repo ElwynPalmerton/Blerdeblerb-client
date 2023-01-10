@@ -9,7 +9,7 @@ const config = {
 
 const environment = process.env.REACT_APP_ENV;
 export const baseURL = config[environment];
-console.log("Environment: ", environment, " - url: ", baseURL);
+console.log("Environment: ", environment);
 
 export default axios.create({
   baseURL,
