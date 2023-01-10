@@ -62,8 +62,6 @@ Clone backend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git`
 
 To run Blerdeblurb locally, you need to clone and run both repos:
 
-To run Blerdeblurb locally, you need to clone and run both repos:
-
 **Running the frontend:**
 
 1. Run `git clone https://github.com/ElwynPalmerton/Blerdeblerb-client.git` from the command line.
