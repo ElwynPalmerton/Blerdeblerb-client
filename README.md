@@ -70,7 +70,7 @@ To run Blerdeblurb locally, you need to clone and run both repos:
 
 **backend:**
 
-1. Run `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git' from the command line.
+1. Run `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git` from the command line.
 2. Run `npm start` from inside the root level of the repo.
 
 **MongoDB:**
