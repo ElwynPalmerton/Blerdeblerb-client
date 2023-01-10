@@ -1,6 +1,6 @@
 # Blerdeblurb
 
-## About Blerdeblurb!
+## About Blerdeblurb
 
 Blerdeblurb was created by Elwyn Palmerton in 2020 as project for learning and practicing React. It was was modeled roughly after Twitter and designed to have a similar functionality with its own style. In 2022 it was redeployed on AWS.
 
