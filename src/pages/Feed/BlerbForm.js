@@ -85,7 +85,7 @@ function PostForm(props) {
         onPaste={handlePaste}
         onChange={handleChange}
         color="secondary"
-        placeholder="Blerb something..."
+        placeholder="Blurb something..."
         value={text}
       />
       <br />
