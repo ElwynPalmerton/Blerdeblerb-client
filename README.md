@@ -41,6 +41,8 @@ _Blerdeblurb_ can be run locally with or without docker.
 
 ## To run Blerdeblurb _with_ docker and docker-compose
 
+NOTE: To run locally with docker you need to have docker installed. Consult the docker documentation at [Get Docker(https://docs.docker.com/get-docker/)] for more information.
+
 1. Clone both repos into the same folder so that the folder structure looks like this:
 
 Blerdeblurb <br>
