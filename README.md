@@ -8,7 +8,7 @@ Blerdeblurb was created by Elwyn Palmerton in 2020 as project for learning and p
 
 ### Frontend
 
-The Blerdeblurb frontend was created with React, Material-UI, and Redux. It uses JWT for login and authentication.
+The Blerdeblurb frontend was created with React, Material-UI, and Redux. It uses JWT's for login and authentication.
 
 ### Backend
 
