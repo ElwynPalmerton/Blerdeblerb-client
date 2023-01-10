@@ -44,8 +44,8 @@ To run Blerdeblurb with docker and docker-compose
 1. Clone both repos into the same folder so that the folder structure looks like this:
 
 Blerdeblurb
-|-- Blerdeblerb-client
-|-- Blerdeblurb-API blerdeblurb.com
+├── API
+├── client
 
 (NOTE: the spelling of the repo names (blerdeblerb) is different than the URL )
 
