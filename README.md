@@ -47,8 +47,8 @@ Blerdeblurb <br>
 ├── API <br>
 ├── client
 
-1.a. Clone frontend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-client.git`
-  b. Clone backend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git'
+Clone frontend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-client.git` <br>
+Clone backend: `git clone https://github.com/ElwynPalmerton/Blerdeblerb-API.git' <br>
   
 (NOTE: the spelling of the repo names (blerdeblerb) is different than the URL )
 
